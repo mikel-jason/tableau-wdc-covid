@@ -45,7 +45,7 @@
             },
             {
                 id: 'continentExp',
-                dataType: tableau.dataTypeEnum.int,
+                dataType: tableau.dataTypeEnum.string,
             },
             {
                 id: 'CumulativeCasesFor14DaysPer100000', // "Cumulative_number_for_14_days_of_COVID-19_cases_per_100000",
@@ -56,7 +56,7 @@
         ];
 
         var tableSchema = {
-            id: 'myConnectorFeed',
+            id: 'COVID19_Data_Feed',
             alias: 'Demo data received from Tableau WDC tutorial fork',
             columns: cols,
         };
@@ -99,7 +99,7 @@
 
 $(document).ready(function () {
     $('#submitButton').click(function () {
-        tableau.connectionName = 'COVID-19 Data Feed';
+        tableau.connectionName = 'COVID19_Data_Feed';
         tableau.submit();
     });
     $('#debugButton').click(function () {

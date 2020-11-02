@@ -45,7 +45,7 @@ app.get('/covid-data', (req, res) => {
         const data = JSON.parse(fs.readFileSync(data_path));
         res.json(data);
     } catch {
-        res.status(400).send(
+        res.status(503).send(
             'Cannot serve data. Please try again in a few minutes.'
         );
     }
